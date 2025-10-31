@@ -1,14 +1,26 @@
-def generate_poem_chain(topic):
+import models
+import prompts
+
+model=models.create_llm_model()
+prompt_template=prompts.mcq_generator_prompt()
+
+chain = prompt_template | model
+
+def generate_mcq_chain(subject):
     """
-    Generate Poem using basic prompt LLM chain
+    Generate mcq using basic prompt LLM chain
 
     Args:
-        topic - topic for the poem
+        subject - subject for the mcq
 
     Returns:
         response.content -> str
     """
+    response = chain.invoke({
+        "subject" : subject
+    })
 
+    return response.content
     # task 1 import llm
     # task 2 import prompt
     # task 3 create chain

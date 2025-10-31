@@ -1,0 +1,9 @@
+# Python virtual environment
+my_env/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Environment variables (NEVER commit this!)
+.env

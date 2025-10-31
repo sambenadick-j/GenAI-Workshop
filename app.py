@@ -1,18 +1,18 @@
 import streamlit as st
 import chains
 
-def poem_generator_app():
+def mcq_generator_app():
     """
-    Generates Poem Generator App with Streamlit, providing user input and displaying output.
+    Generates MCQ Generator App with Streamlit, providing user input and displaying output.
     """
-    st.title("Lets generate a poem ! 👋")
+    st.title("Lets generate MCQ's! 👋")
 
-    with st.form("poem_generator"):
-        topic = st.text_input("Enter a topic for the poem:")
+    with st.form("mcq_generator"):
+        subject = st.text_input("Enter a subject for the mcq:")
         submitted = st.form_submit_button("Submit")
 
         if submitted:
-            response = chains.generate_poem_chain(topic)
+            response = chains.generate_mcq_chain(subject)
             st.info(response)
 
-poem_generator_app()
+mcq_generator_app()
