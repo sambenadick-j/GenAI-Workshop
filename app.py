@@ -14,5 +14,4 @@ def mcq_generator_app():
         if submitted:
             response = chains.generate_mcq_chain(subject)
             st.info(response)
-
 mcq_generator_app()
