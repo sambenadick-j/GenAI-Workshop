@@ -1,7 +1,16 @@
-streamlit
+# Notes:
+# - Create+activate a venv, then: python -m pip install -r requirements.txt
+# - If you get "Could not open requirements file", run pip from this folder:
+#     cd "Z:\aca\sem v\dve\dve-workspop\hw\GenAI-Workshop"
+#     python -m pip install -r .\requirements.txt
+#   or install from any location by using the full path:
+#     python -m pip install -r "Z:\aca\sem v\dve\dve-workspop\hw\GenAI-Workshop\requirements.txt"
+# - Run Streamlit app (example): streamlit run app.py
+# - Adjust package versions as needed for your environment.
+streamlit>=1.20
 langchain
 langchain-classic
 langchain-huggingface
 langchain-core
 langchain-groq
-python-dotenv
+python-dotenv>=0.21.0
